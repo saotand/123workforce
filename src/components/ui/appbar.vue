@@ -1,7 +1,7 @@
 <template>
   <span>
-    <v-app-bar flat height="117">
-      <div style="margin-top:10px;margin-left:40px">
+    <v-app-bar flat fixed height="117" class="mainbarline">
+      <div to="/" style="margin-top:10px;margin-left:40px">
         <img src="@/assets/wflogo.png" class="img-responsive thumbnail" />
       </div>
       <v-spacer></v-spacer>
@@ -14,7 +14,8 @@
       </v-btn>
       <div class="mainbtnspacer"></div>
     </v-app-bar>
-    <v-divider></v-divider>
+
+    <div style="height:117px"></div>
   </span>
 </template>
 
@@ -31,6 +32,10 @@ export default {};
 .mainbtnspacer {
   height: 150px;
   width: 15px;
+}
+
+.mainbarline {
+  border-bottom: 1px solid #eee !important;
 }
 
 .xntext {
