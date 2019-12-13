@@ -1,9 +1,16 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+
+// Pages to load as modules
 import Home from '../views/Home.vue'
 
+
+
+// Router Setup
 Vue.use(VueRouter)
 
+
+// Basic Routes
 const routes = [
   {
     path: '/',

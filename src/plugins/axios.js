@@ -39,9 +39,8 @@ _axios.interceptors.response.use(
   }
 );
 
-Plugin.install = function (Vue, options) {
+Plugin.install = function (Vue) {
   /* eslint-disable */
-  console.log(options)
   Vue.axios = _axios;
   window.axios = _axios;
   Object.defineProperties(Vue.prototype, {
