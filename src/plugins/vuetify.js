@@ -1,7 +1,20 @@
 import Vue from 'vue';
-import Vuetify from 'vuetify/lib';
+import Vuetify, { VLazy, VIcon, VCard, VRating, VToolbar } from 'vuetify/lib';
 
-Vue.use(Vuetify);
+Vue.use(Vuetify,
+    {
+        components: {
+            VLazy,
+            VIcon,
+            VCard,
+            VRating,
+            VToolbar,
+        },
+        options: {
+            customProperties: true
+        },
+        iconfont: "mi"
+    });
 
 export default new Vuetify({
 });

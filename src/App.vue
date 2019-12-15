@@ -1,11 +1,10 @@
 <template>
-  <div id="app">
+  <div id="app" data-app>
     <app-main-bar></app-main-bar>
     <router-view />
+    <app-main-footer></app-main-footer>
   </div>
 </template>
-
-
 
 <style lang="scss">
 #app {

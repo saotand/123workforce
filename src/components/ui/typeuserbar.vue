@@ -1,21 +1,26 @@
 <template>
   <div class="barcolor">
-    <v-container>
-      <template v-for="(tuser,index) in items">
-        <span :key="tuser.name" v-if="tuser.visible">
-          <div v-if="index != 0" class="itemseparator">|</div>
-          <v-btn
-            @click="activatebtn(index)"
+    <v-row justify="space-around">
+      <v-tabs
+        centered
+        fixed-tabs
+        show-arrows
+        background-color="#f1f8fc"
+        v-model="tabs"
+        color="#f1f8fc"
+      >
+        <v-tab v-for="(i,index) in items" :key="i.name">
+          <v-sheet
+            style="width:100%; line-height: 50px; color:#fff; border-radius:5px"
+            height="50"
+            v-if="tabs==index"
             class="ntext"
-            height="55"
-            :dark="tuser.active"
-            :color="tuser.active==true?'#0290d8':''"
-            :text="!tuser.active"
-          >{{tuser.name}}</v-btn>
-          <div class="itemlist"></div>
-        </span>
-      </template>
-    </v-container>
+            color="#0290d8"
+          >{{i.name}}</v-sheet>
+          <span class="ntext" v-else>{{i.name}}</span>
+        </v-tab>
+      </v-tabs>
+    </v-row>
   </div>
 </template>
 <script>
@@ -63,7 +68,9 @@ export default {
       })
     }
   },
-  data: () => ({}),
+  data: () => ({
+    tabs: 3
+  }),
   methods: {
     activatebtn(index) {
       /* eslint-disable */
@@ -74,25 +81,16 @@ export default {
 </script>
 
 <style>
+.v-tabs-slider {
+  height: 100px !important;
+}
+
 .barcolor {
-  margin-top: 10px;
+  margin-top: 40px;
   background-color: #f1f8fc;
   box-shadow: 0 8px 7px rgba(0, 0, 0, 0.16);
-  min-height: 140px;
-  padding: 28px 0;
-}
-
-.itemlist,
-.itemseparator {
-  display: inline-block;
-}
-
-.itemseparator {
-  margin-right: 8px;
-}
-
-.itemlist {
-  margin: 9px;
+  min-height: 100px;
+  padding: 24px 0px;
 }
 
 .ntext {
