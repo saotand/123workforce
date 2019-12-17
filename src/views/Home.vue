@@ -21,6 +21,8 @@
     >
       <app-search-user></app-search-user>
     </v-lazy>
+    <app-splash2></app-splash2>
+    <app-payment-plans></app-payment-plans>
   </span>
 </template>
 

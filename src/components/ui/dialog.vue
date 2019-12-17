@@ -54,7 +54,7 @@ export default {
   },
   data: () => ({
     dialog: false,
-    message: ":D"
+    message: ""
   }),
   methods: {
     onSubmit() {

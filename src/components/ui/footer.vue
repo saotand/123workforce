@@ -6,25 +6,33 @@
       <h1>Follow Us</h1>
       <br />
       <div class="showsocial">
-        <v-btn text height="50px">
-          <img src="@/assets/social/facebook-circle-fill.png" />&nbsp;
-          <img src="@/assets/social/like.png" />&nbsp;&nbsp;&nbsp;&nbsp;14,044 Followers
-        </v-btn>
+        <app-tooltip top tooltip="Facebook">
+          <v-btn text height="50px">
+            <img src="@/assets/social/facebook-circle-fill.png" />&nbsp;
+            <img src="@/assets/social/like.png" />&nbsp;&nbsp;&nbsp;&nbsp;14,044 Followers
+          </v-btn>
+        </app-tooltip>
       </div>
       <div class="showsocial">
-        <v-btn text height="50px">
-          <img src="@/assets/social/instagram-fill.png" />&nbsp;
-          <img src="@/assets/social/heart.png" />&nbsp;&nbsp;&nbsp;&nbsp;733 Followers
-        </v-btn>
+        <app-tooltip top tooltip="Instagram">
+          <v-btn text height="50px">
+            <img src="@/assets/social/instagram-fill.png" />&nbsp;
+            <img src="@/assets/social/heart.png" />&nbsp;&nbsp;&nbsp;&nbsp;733 Followers
+          </v-btn>
+        </app-tooltip>
       </div>
       <br />
       <br />
+
       <div class="showsocial2" v-for="soc in social" :key="soc.name">
-        <v-btn text fab :to="soc.link">
-          <v-icon color="#3c485e" x-large>{{soc.iconalt}}</v-icon>
-          <!-- <img :alt="soc.name" :src="soc.icon" /> -->
-        </v-btn>
+        <app-tooltip top :tooltip="soc.name">
+          <v-btn text fab :to="soc.link">
+            <v-icon color="#3c485e" x-large>{{soc.iconalt}}</v-icon>
+            <!-- <img :alt="soc.name" :src="soc.icon" /> -->
+          </v-btn>
+        </app-tooltip>
       </div>
+
       <br />
       <br />
       <div>

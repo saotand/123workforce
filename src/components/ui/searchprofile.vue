@@ -19,7 +19,14 @@ export default {
       last: "Salinas",
       url: "saotand",
       image: "/img/user.jpg",
-      occupation: "Full Stack Developper"
+      occupation: "Full Stack Developper",
+      skills: [
+        { name: "PHP", icon: "mdi-language-php", percent: "95%" },
+        { name: "Visual Studio", icon: "mdi-visual-studio", percent: "75%" },
+        { name: "Python", icon: "mdi-language-python", percent: "75%" },
+        { name: "C++", icon: "mdi-language-cpp", percent: "85%" },
+        { name: "JavaScript", icon: "mdi-language-javascript", percent: "88%" }
+      ]
     }
   })
 };
