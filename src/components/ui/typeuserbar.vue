@@ -1,90 +1,94 @@
 <template>
   <div class="barcolor">
-    <v-row justify="space-around">
+    <v-container>
       <v-tabs
-        centered
-        fixed-tabs
+        style="margin:0px !important; pading:0px !important; border:1px solid blue; height:70px;"
         show-arrows
-        background-color="#f1f8fc"
         v-model="tabs"
-        color="#f1f8fc"
+        background-color="#f1f8fc"
+        grow
       >
-        <v-tab v-for="(i,index) in items" :key="i.name">
-          <v-sheet
-            style="width:100%; line-height: 50px; color:#fff; border-radius:5px"
-            height="50"
-            v-if="tabs==index"
-            class="ntext"
-            color="#0290d8"
-          >{{i.name}}</v-sheet>
-          <span class="ntext" v-else>{{i.name}}</span>
+        <v-tab
+          style="border:1px solid red;margin:0px !important; padding:0px !important; height:60px;"
+          class="ntext bfont"
+          :ripple="false"
+          v-for="item in items"
+          :key="item.name"
+        >
+          <div
+            style="margin:0px !important; padding:0px !important; height:50px; border:1px solid #000"
+          >{{ item.name }}</div>
         </v-tab>
       </v-tabs>
-    </v-row>
+    </v-container>
   </div>
 </template>
 <script>
 export default {
   props: {
     items: {
-      type: Object,
+      type: Array,
       required: false,
-      default: () => ({
-        "0": {
+      default: () => [
+        {
           name: "Virtual Assistant",
           active: false,
           visible: true
         },
-        "1": {
+        {
           name: "UI Designer",
           active: false,
           visible: true
         },
-        "2": {
+        {
           name: "Animator",
           active: false,
           visible: true
         },
-        "3": {
+        {
           name: "Web Developer",
           active: true,
           visible: true
         },
-        "4": {
+        {
           name: "Copywriter",
           active: false,
           visible: true
         },
-        "5": {
+        {
           name: "Bookkeeper",
           active: false,
           visible: true
         },
-        "6": {
+        {
           name: "Full Stack Developer",
           active: false,
           visible: true
         }
-      })
+      ]
     }
   },
   data: () => ({
     tabs: 3
   }),
+  computed: {
+    allitems() {
+      return this.items.length;
+    }
+  },
   methods: {
     activatebtn(index) {
       /* eslint-disable */
       console.log(index);
+    },
+    setTab(index) {
+      this.tabs = index;
     }
   }
 };
 </script>
 
-<style>
-.v-tabs-slider {
-  height: 100px !important;
-}
-
+<style >
 .barcolor {
   margin-top: 40px;
   background-color: #f1f8fc;
@@ -93,7 +97,7 @@ export default {
   padding: 24px 0px;
 }
 
-.ntext {
-  text-transform: capitalize;
+.bfont {
+  font-size: 27px;
 }
 </style>

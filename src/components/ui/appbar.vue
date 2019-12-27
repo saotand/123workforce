@@ -5,17 +5,16 @@
         <img src="@/assets/wflogo.png" class="img-responsive thumbnail" />
       </div>
       <v-spacer></v-spacer>
-      <v-btn text color="#0290d8" class="mainbtn">
+      <v-btn text color="#1f3445" class="mainbtn light">
         <span class="ntext">Log In</span>
       </v-btn>
       <div class="mainbtnspacer"></div>
-      <v-btn dark color="#0290d8" class="mainbtn">
+      <v-btn dark color="#0290d8" class="mainbtn dark">
         <span class="ntext">Sign Up</span>
       </v-btn>
       <div class="mainbtnspacer"></div>
     </v-app-bar>
-
-    <div style="height:117px"></div>
+    <div style="height:117px"></div><v-icon></v-icon>
   </span>
 </template>
 
@@ -27,6 +26,15 @@ export default {};
 .mainbtn {
   height: 55px !important;
   width: 150px;
+  font-size: 18px !important;
+}
+
+.mainbtn.light {
+  font-weight: normal;
+}
+
+.mainbtn.dark {
+  font-weight: 700;
 }
 
 .mainbtnspacer {

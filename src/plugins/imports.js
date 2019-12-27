@@ -28,6 +28,9 @@ Vue.component("app-dialog", cmpDialog);
 import cmpPayment from "@/components/ui/payment.vue";
 Vue.component("app-payment-plans", cmpPayment);
 
+import cmpSplashImput from "@/components/ui/splash_input.vue";
+Vue.component("app-input", cmpSplashImput);
+
 // user
 import cardprofile from "@/components/user/cardprofile.vue"
 Vue.component("app-card-profile", cardprofile);
