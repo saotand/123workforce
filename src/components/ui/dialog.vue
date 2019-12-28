@@ -1,6 +1,12 @@
 <template>
   <v-row justify="center">
-    <v-btn @click.stop="openWindow" class="ntext">{{text}}</v-btn>
+    <v-btn
+      :x-large="size=='xl'"
+      :style="{width:width}"
+      :small="size=='sm'"
+      @click.stop="openWindow"
+      class="ntext"
+    >{{text}}</v-btn>
     <v-dialog v-model="dialog" max-width="390" class="shapewindow">
       <form @submit.prevent="onSubmit">
         <v-card class="shapewindow">
@@ -49,7 +55,12 @@ export default {
     width: {
       type: String,
       required: false,
-      default: "500"
+      default: "500px"
+    },
+    size: {
+      type: String,
+      required: false,
+      default: ""
     }
   },
   data: () => ({

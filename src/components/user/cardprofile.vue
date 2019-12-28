@@ -6,18 +6,18 @@
           <img src="@/assets/bullet.png" />
         </v-flex>
         <v-flex dark>
-          <center style="color:white">123workforce/king</center>
+          <center style="color:white">123workforce/{{user.url}}</center>
         </v-flex>
         <v-flex xs2></v-flex>
       </v-layout>
     </v-container>
-    <v-container style="background-color: #00adef">
+    <v-container style="background-color: #00adef; max-height:201px !important">
       <v-layout class="fdiagram">
         <v-flex xs3>
-          <div class="roundimage">
+          <div class="roundimage" style="mrgin-left:">
             <v-img
-              height="128px"
-              width="128px"
+              height="124px"
+              width="124px"
               class="img-responsive img-circle borderprofile"
               :src="user.image"
             ></v-img>
@@ -25,15 +25,15 @@
         </v-flex>
         <v-flex xs2 class="d-flex align-center">
           <v-layout column>
-            <v-flex style="color:white; margin-top:20px;">{{user.name}} {{user.last}}</v-flex>
-            <v-flex style="font-size:12px;color:white; margin-top:10px;">{{user.occupation}}</v-flex>
-            <v-flex>
-              <br />
-              <v-divider></v-divider>
-              <br />
-            </v-flex>
-            <v-flex>
-              <app-dialog title="Message" class="ntext" text="Tap to Chat"></app-dialog>
+            <v-flex
+              style="color:white; margin-top:30px; font-size:25px;font-weight:bold;letter-spacing:-0.5px"
+            >{{user.name}} {{user.last}}</v-flex>
+            <v-flex
+              style="letter-spacing:-0.6px;font-size:16px;color:white; margin-top:10px;margin-bottom:8px;"
+            >{{user.occupation}}</v-flex>
+
+            <v-flex style="padding-left:10px">
+              <app-dialog size="sm" width="125px" title="Message" class="ntext" text="Tap to Chat"></app-dialog>
             </v-flex>
           </v-layout>
         </v-flex>
@@ -233,8 +233,8 @@ export default {
 
 .roundimage {
   /*border: 1px solid #000;*/
-  max-width: 130px;
-  max-height: 130px;
+  max-width: 127px;
+  max-height: 127px;
   margin: 0px;
   padding: 3px;
   margin: 10px 30px;

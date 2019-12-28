@@ -15,10 +15,10 @@
 export default {
   data: () => ({
     user: {
-      name: "David",
-      last: "Salinas",
-      url: "saotand",
-      image: "/img/user.jpg",
+      name: "Jose",
+      last: "Quintero",
+      url: "king",
+      image: "./img/user1.jpg",
       occupation: "Full Stack Developper",
       skills: [
         { name: "PHP", icon: "mdi-language-php", percent: "95%" },
